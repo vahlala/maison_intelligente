@@ -3,20 +3,20 @@
 
 class Gyrophare {
 public:
-    Gyrophare(int redPin, int greenPin, int bluePin);
+  Gyrophare(int redPin, int greenPin, int bluePin);
 
-    void allumer();
-    void eteindre();
-    void setColor(int red, int green, int blue);
-    void update(); 
+  void allumer();
+  void eteindre();
+  void setColor(int red, int green, int blue);
+  void update();
 
 private:
-    int redPin;
-    int greenPin;
-    int bluePin;
+  int redPin;
+  int greenPin;
+  int bluePin;
 
-    unsigned long previousMillis;
-    const long interval = 125; 
-    int currentColor; 
-    bool isActive; 
+  unsigned long previousMillis;
+  const long interval = 125;
+  int currentColor;
+  bool isActive;
 };

@@ -1,28 +1,28 @@
 #pragma once
 #include <Arduino.h>
-#include "Gyrophare.h" 
+#include "Gyrophare.h"
 
 enum EtatAlarme {
-    Eteint,
-    Allumer
+  Eteint,
+  Allumer
 };
 
 class Alarme {
 public:
-    Alarme(int pin, int high, int low, Gyrophare* gyrophare);
+  Alarme(int pin, int high, int low, Gyrophare* gyrophare);
 
-    void activer();
-    void desactiver();
-    void update(); 
+  void activer();
+  void desactiver();
+  void update();
 
-    EtatAlarme getEtat() {
-        return etat;
-    }
+  EtatAlarme getEtat() {
+    return etat;
+  }
 
 private:
-    int pin;
-    int high;
-    int low;
-    EtatAlarme etat;
-    Gyrophare* gyrophare; 
+  int pin;
+  int high;
+  int low;
+  EtatAlarme etat;
+  Gyrophare* gyrophare;
 };
